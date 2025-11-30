@@ -2,12 +2,12 @@
 # Script to configure /etc/hosts to resolve specific hostnames
 
 # Backup the current /etc/hosts file
-cp /etc/hosts /etc/hosts.bak
+sudo cp /etc/hosts /etc/hosts.bak
 
 # Remove any previous entries for localhost and facebook.com we might have added
-sed -i '/127.0.0.2 localhost/d' /etc/hosts
-sed -i '/8.8.8.8 facebook.com/d' /etc/hosts
+sudo sed -i '/127.0.0.2 localhost/d' /etc/hosts
+sudo sed -i '/8.8.8.8 facebook.com/d' /etc/hosts
 
 # Add the new entries
-echo "127.0.0.2 localhost" >> /etc/hosts
-echo "8.8.8.8 facebook.com" >> /etc/hosts
+sudo echo "127.0.0.2 localhost" >> /etc/hosts
+sudo echo "8.8.8.8 facebook.com" >> /etc/hosts
